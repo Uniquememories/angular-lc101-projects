@@ -20,6 +20,12 @@ export class CandidatesComponent implements OnInit {
 
   constructor() { }
 
+  addToCrew(spaceCrew: object): void {
+    if (!this.crew.includes(spaceCrew)) {
+      this.crew.push(spaceCrew);
+    }
+  }
+
   ngOnInit() {
   }
 
@@ -27,6 +33,8 @@ export class CandidatesComponent implements OnInit {
 
 
   // BONUS: Code the changeMissionName function here:
-
+  changeMissionName(name: string) {
+    this.missionName = name;
+  }
 
 }
